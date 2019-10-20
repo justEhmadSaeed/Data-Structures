@@ -51,7 +51,8 @@ stack& stack::push(node*& ptr)
 	ptr = NULL;
 	return *this;
 }
-node* stack::pop() // to pop a node out of stack
+// to pop a node out of stack
+node* stack::pop() 
 {
 	if (!isEmpty())
 	{

@@ -13,6 +13,6 @@ void node::setValue(int v) {
 }
 
 void node::print() {
-	cout << value << " ";
+	cout << value << endl;
 }
 
