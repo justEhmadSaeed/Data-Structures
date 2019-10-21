@@ -1,10 +1,13 @@
 #include "priority.h"
 
-priority::priority() {}
+// Default Constructor to call default constructor of Cqueue
+priority::priority():queue() {}
 
+// one parameterized Constructor
 priority::priority(node *&ptr) : queue(ptr) {
 }
 
+// add function to insert node according to its priority
 priority &priority::add(node *&ptr){
 
     if (!top){
@@ -29,15 +32,22 @@ priority &priority::add(node *&ptr){
     }
     return *this;
 }
+
+// Copy Constructor Overloading
 priority::priority(priority &src) : queue((queue &)src) {}
 
+// Assignment operator overloading
 priority &priority::operator=(const priority &src){
     ((queue *)this)->operator=((queue &)src);
 	return *this;
 }
+
+// to print all nodes
 void priority::print()const {
 	queue::print();
 }
-bool priority::isEmpty() {	// check whether Priority Queue is empty or not
+
+// to check whether PriorityQueue is empty or not
+bool priority::isEmpty() {
 	return stack::isEmpty();
 }
