@@ -17,6 +17,5 @@ public:
 	node* remove();
 	void print() const; // to print the Queue
 	bool isEmpty();	// check whether queue is empty or not
-
 	queue& add(node*& ptr);
 };

@@ -3,4 +3,5 @@
   queue.cpp
   stack.cpp
   Generating Code...
-  Queue.vcxproj -> C:\Users\Ehmad\source\repos\DSA\Queue\x64\Debug\Queue.exe
+  LINK : C:\Users\Ehmad\source\repos\New folder\Queue\x64\Debug\Queue.exe not found or not built by the last incremental link; performing full link
+  Queue.vcxproj -> C:\Users\Ehmad\source\repos\New folder\Queue\x64\Debug\Queue.exe
