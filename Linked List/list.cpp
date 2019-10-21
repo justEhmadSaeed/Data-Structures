@@ -165,7 +165,7 @@ list& list::operator+(const list& robj) {
 	rcopy.head = NULL;
 	return *this;
 }
-void list::print() const // to print the stack
+void list::print() const // to print the list
 {
 	if (!head)
 		cout << " List is empty\n";
