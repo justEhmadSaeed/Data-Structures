@@ -36,6 +36,27 @@ queue::queue(const queue& src)
 // 	}
 // }
 
+// Assignment Operator Overloading
+queue&	queue::operator=(const queue& robj)
+{
+	if (this == &robj)
+		return *this;
+	if (true)
+	{
+		queue temp;
+		temp.top = top;
+		temp.tail= tail;
+	}
+	if (true)
+	{
+		queue temp = robj;
+		top = temp.top;
+		tail = temp.tail;
+		temp.top = temp.tail = NULL;
+		count = robj.count;
+	}
+	return *this;
+}
 // To remove the top node 
 node* queue::remove() {
 	if (!top->next)

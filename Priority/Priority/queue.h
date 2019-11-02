@@ -14,6 +14,7 @@ public:
 	queue(const queue& src);
 	// Copy Constructor to handle the empty case
 	// queue (const queue & src) : stack((stack &)src);
+	queue& operator=(const queue& src);	// assignment operator overloading
 	node* remove();
 	void print() const; // to print the Queue
 	bool isEmpty();	// check whether queue is empty or not

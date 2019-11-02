@@ -4,7 +4,7 @@
 stack::stack() : top(NULL), count(0) {}
 
 // One node insertion constructor
-stack::stack(node*& ptr) : top(ptr), count(1)
+stack::stack(node* &ptr) : top(ptr), count(1)
 {
 	top->next = 0;
 	ptr = NULL;
@@ -119,8 +119,8 @@ stack& stack::operator=(const stack& robj) // Assignment Operator overloading
 		top = temp.top;
 		temp.top = NULL;
 		count = robj.count;
-		return *this;
 	}
+	return *this;
 }
 // cascaded push function to add a new node
 stack& stack::push(node*& ptr)
