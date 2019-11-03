@@ -3,34 +3,27 @@
 // Default Constructor assigns value & Priority to 0
 node::node() :value(0), priority(0) {}
 
-// One parameterized Constructor assigns value to v & Priority to 0
-node::node(int v) : value(v), priority(0) {}
+// One parameterized Constructor assigns value to data & Priority to 0
+node::node(int data) : value(data), priority(0) {}
 
 // Two parameterized Constructor assigns value & Priority
-node::node(int v, int p) : value(v), priority(p) {}
+node::node(int data, int p) : value(data), priority(p) {}
 
 // Constructor to create node from a file
-node::node(ifstream& inFile)
-{
-	inFile.read((char*)this, sizeof(this) * 2);
-}
-
-// Constructor to write a node to a file
-node::node(ofstream& oFile)
-{
-	oFile.write((char*)this, sizeof(this) * 2);
+node::node(ifstream& inFile) : value(0), priority(0) {
+	inFile.read((char*)this, sizeof(this->value) * 2);
 }
 
 // Writes the node to the given file
-void node::writeNodeToFile(ofstream& outData)
-{
-	outData.write((char*)this, sizeof(this) * 2);
+void node::writeNodeToFile(ofstream& outData) {
+
+	outData.write((char*)this, sizeof(this->value) * 2);
 }
 
 // Reads the node from the given file and sets data according to the input
-void node::readNodeFromFile(ifstream& inData)
-{
-	inData.read((char*)this, sizeof(this) * 2);
+void node::readNodeFromFile(ifstream& inData) {
+
+	inData.read((char*)this, sizeof(this->value) * 2);
 }
 
 // To get the value of node
@@ -38,8 +31,8 @@ int node::getValue() const {
 	return value;
 }
 // To set the value of node
-void node::setValue(int v) {
-	value = v;
+void node::setValue(int data) {
+	value = data;
 }
 // To get the Priority of Node
 int node::getPriority() const {
@@ -51,6 +44,6 @@ void node::setPriority(int p) {
 }
 // To print nodes
 void node::print() {
-	cout << "Value: " << value << ", Priority: " << priority << endl;
+	cout << value << endl;
 }
 
