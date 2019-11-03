@@ -14,6 +14,7 @@ public:
 	CirList& insertAt(int index, node*& ptr);
 	node* remove();
 	node* removeAt(int index);
+	node& operator[](int index);
 	CirList& operator=(const CirList& src);
 	CirList& Swaping(int index1, int index2);
 	CirList& flip();

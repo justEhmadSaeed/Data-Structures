@@ -14,5 +14,16 @@ int main() {
 	C1.print();
 	C1.Swaping(0, 1);
 	C1.print();
+	C1.insert(n4).insert(n5);
+	C1.print();
+	C1.flip();
+	C1.print();
+	C1.remove();
+	C1.print();
+	C1.removeAt(2);
+	C1.print();
+	C1[0].print();
+	C1[1].print();
+	C1[4].print();
 	system("pause");
 }

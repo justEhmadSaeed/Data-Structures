@@ -91,11 +91,22 @@ node* CirList::removeAt(int index) {
 	node* ptr = rptr->next;
 	rptr->next = ptr->next;
 	ptr->next = NULL;
-	if (index = count - 1)
+	if (index == count - 1)
 		head = rptr;
 
 	--count;
 	return ptr;
+}
+// Operator Array Overloading
+node& CirList::operator[](int index) {
+	if (index <= 0)
+		return *head->next;
+	if (index >= count)
+		return *head;
+	node* rptr = head->next;
+	for (int i = 0; i < index; ++i)
+		rptr = rptr->next;
+	return *rptr;
 }
 // Assignment Operator
 CirList& CirList::operator=(const CirList& src) {
@@ -139,7 +150,22 @@ CirList& CirList::Swaping(int index1, int index2) {
 }
 // Flipping the Nodes of Circular List
 CirList& CirList::flip() {
-
+	if (count < 2)
+		return *this;
+	node* rptr, ** ARR = new node * [count];  // created an array of node pointers, of length count
+	rptr = head->next;
+	// copying the nodes' addresses in pointer ARR
+	for (int i = 0; i < count; ++i) {
+		ARR[i] = rptr;
+		rptr = rptr->next;
+	}
+	// Reversing the directions of next pointers of each node
+	// e.g ARR[1]->next will point towards ARR[0]
+	for (int i = 1; i < count; ++i)
+		ARR[i]->next = ARR[i - 1];
+	ARR[0]->next = head;
+	delete[]ARR;
+	return *this;
 }
 // Print all Nodes in Circular List
 void CirList::print()const {
@@ -164,4 +190,5 @@ CirList::~CirList() {
 		ptr = remove();
 		delete ptr;
 	}
+	count = 0;
 }
