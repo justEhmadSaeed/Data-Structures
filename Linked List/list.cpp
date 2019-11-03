@@ -30,9 +30,13 @@ bool list::isEmpty() const {
 int list::getCount() const {
 	return count;
 }
-// To insert first node in List object
+// To insert node as head in List object
 list& list::insert(node*& ptr) {
-	ptr->next = head;
+	if(!head)
+		ptr->next = NULL;
+	else
+		ptr->next = head;
+	
 	head = ptr;
 	ptr = NULL;
 	++count;

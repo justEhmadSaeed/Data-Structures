@@ -11,7 +11,7 @@ public:
 	list(const list& src);		// Copy Constructor	
 	bool isEmpty()const;	// To check whether List Object is empty or not
 	int getCount()const;	// To get the number of nodes in List Object
-	list& insert(node*& ptr);	// To insert first node in List object
+	list& insert(node*& ptr);	// To insert node as head in List object
 	list& insertAt(int index, node*& ptr);
 	void deleteNodes(node*& ptr);	// To delete nodes from list from the given node to the end
 	node* remove();		// To remove first node in the list	
