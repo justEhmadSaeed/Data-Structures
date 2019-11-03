@@ -14,7 +14,6 @@ public:
 	node();									// Default Constructor
 	node(int);							// One parameterized Constructor
 	node(int , int);						// Two Parameterized Constructor
-  	node(ofstream &oFile);                  // Constructor to write a node to a file
 	node(ifstream &inFile);                 // Constructor to create node from a file
 	void writeNodeToFile(ofstream &outData); // Writes the node to the given file
 	void readNodeFromFile(ifstream &inData); // Reads the node from the given file and sets data according to the input
