@@ -6,5 +6,12 @@
 ## CStack Class
 - It has a top pointer to to point to the top node of stack
 ## CQueue
+-
 ## CPriority
+-
 ## Linked List
+-
+## Circular Linked List
+-
+## Doubly Linked List
+-
