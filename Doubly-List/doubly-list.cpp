@@ -7,6 +7,16 @@ Doubly& Doubly::insertAt(int index, node* ptr) {}
 node* Doubly::removeLeft() {}
 node* Doubly::removeRight() {}
 node* Doubly::removeAt(int index) {}
+void Doubly::print(bool left2Right)const{
+    node* ptr;
+    int i=0;
+    if(left2Right)
+        for (ptr = headLeft; i < count; ++i, ptr = ptr->right)
+            ptr->print();
+    else
+        for(ptr = headRight; i < count; ++i, ptr= ptr->left)
+            ptr->print();
+}
 Doubly::~Doubly()
 {
 }

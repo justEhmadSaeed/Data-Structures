@@ -14,6 +14,7 @@ public:
 	node* removeLeft();
 	node* removeRight();
 	node* removeAt(int index);
+	void print(bool left2Right)const;
 	~Doubly();
 
 
